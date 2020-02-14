@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home_page"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/catalogFragment"
+        android:icon="@drawable/ic_saddle_stitched_booklet"
+        android:title="@string/catalog" />
+
+    <item
+        android:id="@+id/subscribeFragment"
+        android:icon="@drawable/ic_box"
+        android:title="@string/subscribe" />
+
+    <item
+        android:id="@+id/supportFragment"
+        android:icon="@drawable/ic_headset"
+        android:title="@string/support" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_female_profile"
+        android:title="@string/profile" />
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="catalog"
+            type="md.cadourionline.app.models.Catalog" />
+
+        <variable
+            name="handler"
+            type="md.cadourionline.app.handlers.CatalogHandler" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="@dimen/horizontal_catalog_item_width"
+        android:layout_height="@dimen/horizontal_catalog_item_height"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:imageFromUri="@{catalog.image}"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorRedLight"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/padding_normal"
+            android:text="@{catalog.title}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            tools:text="@tools:sample/cities" />
+    </FrameLayout>
+</layout>

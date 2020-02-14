@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="md.cadourionline.app.models.Product" />
+
+        <variable
+            name="handler"
+            type="md.cadourionline.app.handlers.ProductHandler" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/image_product_list_width"
+                android:layout_height="@dimen/image_product_list_height"
+                android:background="@drawable/white_rect_with_brown_stroke_background">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    app:imageFromUri="@{product.image}"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/white_rect_with_orange_stroke_background"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:text='@{@string/until_end_promotion + " :"}'
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_12sp"
+                        tools:text="@string/until_end_promotion" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        app:countDownTimerText="@{product.time}"
+                        tools:text="@tools:sample/date/hhmm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="@color/colorOrange"
+                        android:padding="@dimen/padding_small"
+                        android:text='@{"-" + product.sale}'
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{product.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14sp"
+                tools:text="@tools:sample/cities" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{product.price}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_22sp"
+                    android:textStyle="bold"
+                    tools:text="@tools:sample/cities" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textStyle="italic"
+                    app:strikethroughText="@{product.price}"
+                    tools:text="@tools:sample/cities" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

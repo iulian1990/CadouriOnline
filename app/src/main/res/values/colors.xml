@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/brown_400</color>
+    <color name="colorPrimaryDark">@color/brown_400</color>
+    <color name="colorAccent">@color/red_50</color>
+
+    <color name="colorRedLight">@color/red_50</color>
+    <color name="colorRed">@color/red_300</color>
+
+    <color name="colorOrange">@color/deep_orange_100</color>
+
+    <color name="colorBrown">@color/brown_400</color>
+    <color name="colorIndigoDark">@color/brown_400</color>
+
+</resources>
