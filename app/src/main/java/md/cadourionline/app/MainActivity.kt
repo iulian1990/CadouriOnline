@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setupWithNavController(navController)
     }
 
-    fun test() {
+    fun method() {
 
     }
 }
