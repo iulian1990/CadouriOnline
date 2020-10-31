@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun color2() {
+    fun color3a() {
 
     }
 }
