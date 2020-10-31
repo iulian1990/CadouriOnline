@@ -21,4 +21,8 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavigation.setupWithNavController(navController)
     }
+
+    fun test() {
+
+    }
 }
