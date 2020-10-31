@@ -25,4 +25,8 @@ class MainActivity : AppCompatActivity() {
     fun method() {
 
     }
+
+    fun color() {
+
+    }
 }
