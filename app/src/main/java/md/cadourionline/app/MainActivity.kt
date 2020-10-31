@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun branches5() {
+    fun branches6() {
 
     }
 }
